@@ -2,7 +2,7 @@
 
 from socket import *
 
-HOST = '45.76.50.110'
+HOST = '119.29.183.89'
 PORT = 21567
 BUFSIZ = 1024
 ADDR = (HOST, PORT)
@@ -12,6 +12,7 @@ data = "connection"
 udpCliSock.sendto(str.encode(data), ADDR)
 
 recv_count = 0
+max_number = 0
 
 while True:
 	print("client")
@@ -19,6 +20,8 @@ while True:
 	recv_count = recv_count + 1
 	print(data)
 	sum_packet = int(data.decode('UTF-8'))
+	if sum_packet > max_number:
+		max_number = sum_number
 	loss_rate = 1 - recv_count/sum_packet
 	file1 =  open("lossrate.txt", 'a')
 	file1.write(str(recv_count)+'  '+str(sum_packet)+'  '+str(loss_rate)+'\n')
