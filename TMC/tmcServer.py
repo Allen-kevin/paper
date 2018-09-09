@@ -15,25 +15,30 @@ udpSerSock.bind(ADDR)
 connection, addr = udpSerSock.recvfrom(BUFSIZ)
 print(connection)
 sequence = 1
-qStr = SqQueue(30)
-qTime = SQQueue(30)
+qStr = CircularQueue.SqQueue(30)
+qTime = CircularQueue.SqQueue(30)
+
 
 while True:
-	data = str(sequence)
 	t = time.time()
-	if q.QueueFull()
+	if qStr.QueueFull():
+		#print(qTime.ShowQueue())
+		#print(qStr.ShowQueue())
 		rate = qStr.SumStrQueue()/qTime.SumTimeQueue()
 		print(rate/(1024*1024), end = '\n')
-		if rate/(1024*1024) > 50:
-			sleepTime = qStr.SumStrQueue()/50
+		if rate/(1024*1024) > 0.01:
+			sleepTime = qStr.SumStrQueue()/0.01 - qTime.SumTimeQueue()
 			time.sleep(sleepTime)
 		qTime.DeQueue()
 		udpSerSock.sendto(str.encode(qStr.DeQueue()), addr)
 		sequence = sequence + 1
-		qStr.EnQueue(data)
+		qStr.EnQueue(str(sequence))
 		qTime.EnQueue(t)
 	else:
-		qStr.EnQueue(data)
-		qTime.EnQueue(time)
+		#data = str(sequence)
+		#print(sequence)
+		qStr.EnQueue(str(sequence))
+		qTime.EnQueue(t)
+		sequence = sequence + 1
 
 udpSerSock.close()
