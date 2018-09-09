@@ -22,16 +22,16 @@ qTime = CircularQueue.SqQueue(30)
 while True:
 	t = time.time()
 	if qStr.QueueFull():
-		#print(qTime.ShowQueue())
-		#print(qStr.ShowQueue())
+		print(qTime.SumTimeQueue())
+		print(qStr.SumStrQueue())
 		rate = qStr.SumStrQueue()/qTime.SumTimeQueue()
 		print(rate/(1024*1024), end = '\n')
-		if rate/(1024*1024) > 0.01:
-			sleepTime = qStr.SumStrQueue()/0.01 - qTime.SumTimeQueue()
+		if rate/(1024*1024) > 0.0001:
+			sleepTime = qStr.SumStrQueue()/(0.0001*1024*1024) - qTime.SumTimeQueue()
 			time.sleep(sleepTime)
 		qTime.DeQueue()
 		udpSerSock.sendto(str.encode(qStr.DeQueue()), addr)
-		sequence = sequence + 1
+		#sequence = sequence + 1
 		qStr.EnQueue(str(sequence))
 		qTime.EnQueue(t)
 	else:
@@ -39,6 +39,7 @@ while True:
 		#print(sequence)
 		qStr.EnQueue(str(sequence))
 		qTime.EnQueue(t)
-		sequence = sequence + 1
+
+	sequence = sequence + 1
 
 udpSerSock.close()
