@@ -17,10 +17,14 @@ print(connection)
 sequence = 1
 qStr = CircularQueue.SqQueue(30)
 qTime = CircularQueue.SqQueue(30)
-
+minTime = time.time()
 
 while True:
 	t = time.time()
+
+	if t - minTime > 60:
+		break
+
 	if qStr.QueueFull():
 		print(qTime.SumTimeQueue())
 		print(qStr.SumStrQueue())
