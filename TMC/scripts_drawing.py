@@ -3,7 +3,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-filename = ".txt"
+filename = "lossrate.txt"
 x = [] 
 y = []
 
@@ -13,7 +13,7 @@ with open(filename, r) as f:
     for line in lines:
         value = [float(s) for s in line.split()]
         x.append(line[0])
-        y.append(line[1])
+        y.append(line[3])
 
 plt.plot(x, y)
 plt.show()
