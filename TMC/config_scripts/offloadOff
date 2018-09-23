@@ -1,0 +1,7 @@
+/etc/init.d/iptables stop
+
+ethtool -K eth4 tso off
+ethtool -K eth4 gso off
+ethtool -K eth4 gro off
+
+
