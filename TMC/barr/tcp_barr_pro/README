@@ -1,0 +1,19 @@
+Usage of "pqrc" module
+
+1. Compile 
+   cd tcp_pqrc_pro
+	 make
+
+2. Insert module
+   
+   insmod tcp_pqrc_pro.ko 
+   
+   tips:This module can be inserted with 1 parameters: Qt
+
+	 NOTE:Qt's value should equate with "preq" module's.
+   
+   e.g. insmod tcp_pqrc.ko Qt=10 
+
+3. Change proc interface to use this module
+   
+   echo PQRC > /proc/sys/net/ipv4/tcp_retransmission_algorithm 

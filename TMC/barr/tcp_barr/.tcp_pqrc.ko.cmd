@@ -1,0 +1,1 @@
+cmd_/home/wanwenkai/pqrc/tcp_pqrc/tcp_pqrc.ko := ld -r -m elf_x86_64 -T /home/wanwenkai/linux-retransmission-module/3.10.25.5/scripts/module-common.lds --build-id  -o /home/wanwenkai/pqrc/tcp_pqrc/tcp_pqrc.ko /home/wanwenkai/pqrc/tcp_pqrc/tcp_pqrc.o /home/wanwenkai/pqrc/tcp_pqrc/tcp_pqrc.mod.o

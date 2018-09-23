@@ -1,0 +1,1 @@
+cmd_/home/shenyifan/tcp_pqrc1/tcp_pqrc1.ko := ld -r -m elf_x86_64 -T /home/shenyifan/temp/3.10.25.4/scripts/module-common.lds --build-id  -o /home/shenyifan/tcp_pqrc1/tcp_pqrc1.ko /home/shenyifan/tcp_pqrc1/tcp_pqrc1.o /home/shenyifan/tcp_pqrc1/tcp_pqrc1.mod.o
