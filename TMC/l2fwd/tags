@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APP	Makefile	/^APP = l2fwd$/;"	m
+BACKLOG_LIMIT	main.c	180;"	d	file:
+BUCKET_SIZE	main.c	178;"	d	file:
+BURST_TX_DRAIN_US	main.c	95;"	d	file:
+CHECK_INTERVAL	main.c	929;"	d	file:
+DEBUG_DROP	main.c	197;"	d	file:
+DEBUG_OUT_OF_ORDER	main.c	198;"	d	file:
+DELAY_QUEUE_LEN	main.c	173;"	d	file:
+DQ_pkt	main.c	/^typedef struct DQ_pkt {$/;"	s	file:
+DROP_CYCLE	main.c	189;"	d	file:
+DROP_NUMBER	main.c	190;"	d	file:
+DROP_RAND	main.c	185;"	d	file:
+DROP_RATE	main.c	186;"	d	file:
+MAX_CHECK_TIME	main.c	930;"	d	file:
+MAX_PKT_BURST	main.c	94;"	d	file:
+MAX_RX_QUEUE_PER_LCORE	main.c	121;"	d	file:
+MAX_TIMER_PERIOD	main.c	161;"	d	file:
+MAX_TX_QUEUE_PER_PORT	main.c	122;"	d	file:
+MBUF_SIZE	main.c	91;"	d	file:
+NB_MBUF	main.c	92;"	d	file:
+PKT_STATE_DROPPED	main.c	169;"	d	file:
+PKT_STATE_NORMAL	main.c	166;"	d	file:
+PKT_STATE_OUTOFORDER	main.c	168;"	d	file:
+PKT_STATE_RETRANS	main.c	167;"	d	file:
+RATE_CONTROL	main.c	175;"	d	file:
+RATE_LIMIT_M	main.c	177;"	d	file:
+RTE_LOGTYPE_L2FWD	main.c	89;"	d	file:
+RTE_TARGET	Makefile	/^RTE_TARGET ?= x86_64-native-linuxapp-gcc$/;"	m
+RTE_TEST_RX_DESC_DEFAULT	main.c	100;"	d	file:
+RTE_TEST_TX_DESC_DEFAULT	main.c	101;"	d	file:
+SRCS-y	Makefile	/^SRCS-y := main.c$/;"	m
+TCP_SEQ_BETWEEN	main.c	85;"	d	file:
+TCP_SEQ_GEQ	main.c	84;"	d	file:
+TCP_SEQ_GT	main.c	83;"	d	file:
+TCP_SEQ_LEQ	main.c	82;"	d	file:
+TCP_SEQ_LT	main.c	81;"	d	file:
+TIMER_MILLISECOND	main.c	160;"	d	file:
+TOKEN_INC_THRESH	main.c	179;"	d	file:
+TX_DELAY_US	main.c	172;"	d	file:
+__rte_cache_aligned	main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:l2fwd_port_statistics
+__rte_cache_aligned	main.c	/^} __rte_cache_aligned;$/;"	v	typeref:struct:lcore_queue_conf
+check_all_ports_link_status	main.c	/^check_all_ports_link_status(uint8_t port_num, uint32_t port_mask)$/;"	f	file:
+dq_count	main.c	/^    int dq_count;\/\/added by shenyifan$/;"	m	struct:l2fwd_port_statistics	file:
+dq_pkt	main.c	/^} dq_pkt;$/;"	t	typeref:struct:DQ_pkt	file:
+drop	main.c	/^    int drop;\/\/count for random drop made by shenyifan$/;"	m	struct:l2fwd_port_statistics	file:
+dropped	main.c	/^	uint64_t dropped;\/\/right now, packets only dropped because of full dq$/;"	m	struct:l2fwd_port_statistics	file:
+dst_port	main.c	/^    unsigned dst_port;$/;"	m	struct:DQ_pkt	file:
+get_eth_hdr	main.c	/^inline struct ether_hdr *get_eth_hdr(struct rte_mbuf *m) $/;"	f
+get_ethhdr	main.c	/^inline struct ethhdr *get_ethhdr(struct rte_mbuf *m)$/;"	f
+get_iphdr	main.c	/^inline struct iphdr *get_iphdr(struct rte_mbuf *m)$/;"	f
+get_ipv4_hdr	main.c	/^inline struct ipv4_hdr *get_ipv4_hdr(struct rte_mbuf *m)$/;"	f
+get_tcp_hdr	main.c	/^inline struct tcp_hdr *get_tcp_hdr(struct rte_mbuf *m)$/;"	f
+get_tcphdr	main.c	/^inline struct tcphdr *get_tcphdr(struct rte_mbuf *m)$/;"	f
+get_token	main.c	/^int get_token(uint64_t cur_tsc, uint16_t len)$/;"	f
+l2fwd_dst_ports	main.c	/^static uint32_t l2fwd_dst_ports[RTE_MAX_ETHPORTS];$/;"	v	file:
+l2fwd_enabled_port_mask	main.c	/^static uint32_t l2fwd_enabled_port_mask = 0;$/;"	v	file:
+l2fwd_launch_one_lcore	main.c	/^l2fwd_launch_one_lcore(__attribute__((unused)) void *dummy)$/;"	f	file:
+l2fwd_main_loop	main.c	/^l2fwd_main_loop(void)$/;"	f	file:
+l2fwd_parse_args	main.c	/^l2fwd_parse_args(int argc, char **argv)$/;"	f	file:
+l2fwd_parse_nqueue	main.c	/^l2fwd_parse_nqueue(const char *q_arg)$/;"	f	file:
+l2fwd_parse_portmask	main.c	/^l2fwd_parse_portmask(const char *portmask)$/;"	f	file:
+l2fwd_parse_timer_period	main.c	/^l2fwd_parse_timer_period(const char *q_arg)$/;"	f	file:
+l2fwd_pktmbuf_pool	main.c	/^struct rte_mempool * l2fwd_pktmbuf_pool = NULL;$/;"	v	typeref:struct:rte_mempool
+l2fwd_port_statistics	main.c	/^struct l2fwd_port_statistics {$/;"	s	file:
+l2fwd_ports_eth_addr	main.c	/^static struct ether_addr l2fwd_ports_eth_addr[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:ether_addr	file:
+l2fwd_rx_queue_per_lcore	main.c	/^static unsigned int l2fwd_rx_queue_per_lcore = 1;$/;"	v	file:
+l2fwd_send_burst	main.c	/^l2fwd_send_burst(struct lcore_queue_conf *qconf, unsigned n, uint8_t port)$/;"	f	file:
+l2fwd_send_packet	main.c	/^l2fwd_send_packet(struct rte_mbuf *m, uint8_t port)$/;"	f	file:
+l2fwd_usage	main.c	/^l2fwd_usage(const char *prgname)$/;"	f	file:
+lcore_queue_conf	main.c	/^struct lcore_queue_conf lcore_queue_conf[RTE_MAX_LCORE];$/;"	v	typeref:struct:lcore_queue_conf
+lcore_queue_conf	main.c	/^struct lcore_queue_conf {$/;"	s	file:
+len	main.c	/^	unsigned len;$/;"	m	struct:mbuf_table	file:
+m	main.c	/^    struct rte_mbuf *m;$/;"	m	struct:DQ_pkt	typeref:struct:DQ_pkt::rte_mbuf	file:
+m_table	main.c	/^	struct rte_mbuf *m_table[MAX_PKT_BURST];$/;"	m	struct:mbuf_table	typeref:struct:mbuf_table::rte_mbuf	file:
+main	main.c	/^main(int argc, char **argv)$/;"	f
+mbuf_table	main.c	/^struct mbuf_table {$/;"	s	file:
+n_rx_port	main.c	/^	unsigned n_rx_port;$/;"	m	struct:lcore_queue_conf	file:
+nb_rxd	main.c	/^static uint16_t nb_rxd = RTE_TEST_RX_DESC_DEFAULT;$/;"	v	file:
+nb_txd	main.c	/^static uint16_t nb_txd = RTE_TEST_TX_DESC_DEFAULT;$/;"	v	file:
+outoforder	main.c	/^    int outoforder;$/;"	m	struct:l2fwd_port_statistics	file:
+payloadlen	main.c	/^int payloadlen(struct rte_mbuf *m)$/;"	f
+port_conf	main.c	/^static const struct rte_eth_conf port_conf = {$/;"	v	typeref:struct:rte_eth_conf	file:
+port_statistics	main.c	/^struct l2fwd_port_statistics port_statistics[RTE_MAX_ETHPORTS];$/;"	v	typeref:struct:l2fwd_port_statistics
+print_stats	main.c	/^print_stats(void)$/;"	f	file:
+retransmition	main.c	/^    uint64_t retransmition;$/;"	m	struct:l2fwd_port_statistics	file:
+rx	main.c	/^	uint64_t rx;$/;"	m	struct:l2fwd_port_statistics	file:
+rx_port_list	main.c	/^	unsigned rx_port_list[MAX_RX_QUEUE_PER_LCORE];$/;"	m	struct:lcore_queue_conf	file:
+state	main.c	/^    char state;$/;"	m	struct:DQ_pkt	file:
+timer_period	main.c	/^static int64_t timer_period = 2 * TIMER_MILLISECOND * 1000; $/;"	v	file:
+timestamp	main.c	/^    uint64_t timestamp;$/;"	m	struct:DQ_pkt	file:
+tx	main.c	/^	uint64_t tx;$/;"	m	struct:l2fwd_port_statistics	file:
+tx_mbufs	main.c	/^	struct mbuf_table tx_mbufs[RTE_MAX_ETHPORTS];$/;"	m	struct:lcore_queue_conf	typeref:struct:lcore_queue_conf::mbuf_table	file:
